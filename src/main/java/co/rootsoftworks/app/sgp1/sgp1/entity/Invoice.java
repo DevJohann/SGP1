@@ -2,12 +2,19 @@ package co.rootsoftworks.app.sgp1.sgp1.entity;
 
 import java.util.Date;
 
-import org.springframework.stereotype.Component;
 
-@Component
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table
 public class Invoice {
     
-    //Primary key
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long invoiceID;
     
     private Date date;
